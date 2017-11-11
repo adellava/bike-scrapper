@@ -1,0 +1,15 @@
+{
+  "name": "bike-scrapper",
+  "version": "0.0.1",
+  "description": "bike scrapper is for find the right bike components for you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrap": "node index.js"
+  },
+  "author": "Antonio Dell'Ava",
+  "license": "WTFPL",
+  "dependencies": {
+    "crawler": "1.1.1"
+  }
+}

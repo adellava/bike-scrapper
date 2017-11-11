@@ -1,0 +1,29 @@
+{
+    "schemas": {
+        "bike-components": "#cart_quantity .price",
+        "chainreactioncycles": "[itemtype='http://schema.org/Product'] .crcPDPPriceHidden",
+        "probikeshop": "#product-price"
+    },
+    "components": {
+        "groupset": {
+            "SRAMGX-1x12": {
+                "label": "SRAM GX 1x12",
+                "options": [
+                    {
+                        "URL": "https://www.bike-components.de/en/SRAM/GX-Eagle-Direct-Mount-Trigger-1x12-GXP-Groupset-2018-Model-p59492",
+                        "schema": "bike-components"
+                    },
+                    {
+                        "URL": "http://www.chainreactioncycles.com/it/it/gruppo-sram-gx-eagle-12v-gxp/rp-prod161511",
+                        "schema": "chainreactioncycles"
+                    },
+                    {
+                        "URL": "https://www.probikeshop.it/gruppo-sram-eagle-gx-12v-mono/139403.html?gshop=IT&gclid=EAIaIQobChMI2PqVqry21wIVLyjTCh1LRghBEAQYASABEgJFF_D_BwE",
+                        "schema": "probikeshop"
+                    }
+                ]
+            }
+        }
+    }
+
+}
