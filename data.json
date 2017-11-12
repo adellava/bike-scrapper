@@ -1,0 +1,18 @@
+{
+    "groupset": {
+        "SRAMGX-1x12": [
+            {
+                "origin": "chainreactioncycles",
+                "price": "376.99"
+            },
+            {
+                "origin": "bike-components",
+                "price": "389.00"
+            },
+            {
+                "origin": "probikeshop",
+                "price": "429.90"
+            }
+        ]
+    }
+}
