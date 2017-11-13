@@ -18,8 +18,8 @@ const sanitize = (c) => {
     let n = c.toString()
         .replace("€", "")               // remove €
         .replace(",", ".")              // number format
-        .replace(/^\s+|\s+$/g, '');     // trim string
-    return n;
+        .replace(/[^\d.-]/g, '');     // trim string
+    return parseFloat(n);
 };
 
 const cbGenerator = (schema, origin, componentKey, componentTypeKey) => {
@@ -28,7 +28,9 @@ const cbGenerator = (schema, origin, componentKey, componentTypeKey) => {
             console.log(error);
         } else {
             var $ = res.$;
-            console.log("   - prezzo " + origin + " ", sanitize($(schema).text()));
+            console.log(componentTypeKey + " >>  " + componentKey + ">  - prezzo " + origin + " ", sanitize($(schema).text()));
+
+
 
             if (!objToBeSaved[componentTypeKey]){
                 objToBeSaved[componentTypeKey] = {};
@@ -43,7 +45,7 @@ const cbGenerator = (schema, origin, componentKey, componentTypeKey) => {
                 price: sanitize($(schema).text())
             });
 
-            objToBeSaved[componentTypeKey][componentKey].sort(item => -item.price);
+            objToBeSaved[componentTypeKey][componentKey] = objToBeSaved[componentTypeKey][componentKey].sort( (a, b) => a.price - b.price);
 
             jsonfile.writeFile("data.json", objToBeSaved, {
                 spaces: 4
@@ -63,9 +65,7 @@ let arrToBeParsed = [];
 let objToBeSaved = {};
 
 Object.entries(resources.components).forEach(([componentTypeKey, componentTypeValue], i) => {
-    console.log(componentTypeKey);
     Object.entries(resources.components[componentTypeKey]).forEach(([componentKey, componentValue]) => {
-        console.log(">>"+componentKey);
         arrToBeParsed = arrToBeParsed.concat(resources.components[componentTypeKey][componentKey].options.reduce((acc, val) => {
             acc.push({
                 uri: val.URL,

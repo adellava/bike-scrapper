@@ -3,29 +3,29 @@
         "SRAMGX-1x12": [
             {
                 "origin": "chainreactioncycles",
-                "price": "376.99"
+                "price": 376.99
             },
             {
                 "origin": "bike-components",
-                "price": "389.00"
+                "price": 389
             },
             {
                 "origin": "probikeshop",
-                "price": "429.90"
+                "price": 429.9
             }
         ],
         "schimanoslx-1x11": [
             {
                 "origin": "bike-components",
-                "price": "from 229.00"
+                "price": 229
             },
             {
                 "origin": "chainreactioncycles",
-                "price": "420.99"
+                "price": 282.49
             },
             {
                 "origin": "probikeshop",
-                "price": "349.99"
+                "price": 349.99
             }
         ]
     }
