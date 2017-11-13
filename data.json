@@ -13,6 +13,20 @@
                 "origin": "probikeshop",
                 "price": "429.90"
             }
+        ],
+        "schimanoslx-1x11": [
+            {
+                "origin": "bike-components",
+                "price": "from 229.00"
+            },
+            {
+                "origin": "chainreactioncycles",
+                "price": "420.99"
+            },
+            {
+                "origin": "probikeshop",
+                "price": "349.99"
+            }
         ]
     }
 }
